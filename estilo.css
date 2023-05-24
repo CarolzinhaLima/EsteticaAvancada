@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root{
+    --rosaClaro: #FDD4DD;
+    --rosaEscuro: #FFB4C4;
+    --rosaMedio: #FFB4C4;
+    --cinzaClaro: #f5f5f5;
+}
 *{
     margin: 0;
     padding: 0;
@@ -108,13 +114,16 @@ bottom: 84%;
 }
 .wrapper.active-popup{
     transform: scale(1);
+    background: rgb(246,118,146);
+    background: linear-gradient(0deg, rgba(246,118,146,1) 0%, rgba(253,212,221,1) 58%, rgba(253,212,221,1) 62%);
 }
 
 .wrapper.active {
-    height: 520px;
+    height: 600px;
 }
 
 .wrapper .form-box{
+    position: absolute;
     width: 100%;
     padding: 40px;
 }
