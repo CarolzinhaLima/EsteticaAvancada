@@ -147,6 +147,7 @@ footer .termo a{
     footer .termo a{
         margin: 0;
         white-space: normal;
+        margin-left: 10%;
         
     }
     footer .termo{
@@ -162,9 +163,7 @@ footer .termo a{
     }
     footer .container-rodape{
         background-color: #fdd4dd;
-        width: 100%
-        
-        
+        width: 100%     
     }
     
     footer ul{
@@ -175,8 +174,7 @@ footer .termo a{
         text-decoration: solid; 
         white-space: nowrap;
         margin-top: 1rem;
-        margin-bottom: 1rem;
-        text-align: center !important;
+         text-align: center !important;
               
     }
     .h6{
@@ -190,7 +188,7 @@ footer .termo a{
         margin-right: 0;
     }
     footer .redes{
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
                 
     }
     footer .svg{
