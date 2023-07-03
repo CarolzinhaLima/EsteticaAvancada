@@ -1,0 +1,23 @@
+
+:root{
+    --rosaClaro: #FDD4DD;
+    --rosaEscuro: #F67692;
+    --rosaMedio: #FFB4C4;
+    --cinzaClaro: #f5f5f5;
+}
+.navbar bg-light fixed-top{
+background: #f5f5f5 !important;
+}
+.navbar-brand{
+    margin-bottom: -8px;
+}
+.offcanvas-header{
+    background: var(--rosaClaro);
+    border-top-left-radius: black;   
+}
+.offcanvas-body{
+  background: var(--rosaClaro);
+}
+.offcanvas{
+width: 65% !important;
+}

@@ -4,9 +4,8 @@ const resgisterLink = document.querySelector('.resgister-link');
 const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
 
-
 resgisterLink.addEventListener('click', ()=> {
-    wrapper.classList.add('active');    
+    wrapper.classList.add('active');
 });
 
 loginLink.addEventListener('click', ()=> {
@@ -14,9 +13,9 @@ loginLink.addEventListener('click', ()=> {
 });
 
 btnPopup.addEventListener('click', ()=> {
-    wrapper.classList.add('active-popup');    
+    wrapper.classList.add('active-popup');
 });
 
 iconClose.addEventListener('click', ()=> {
-    wrapper.classList.remove('active-popup');    
-});
+    wrapper.classList.remove('active-popup');
+});  

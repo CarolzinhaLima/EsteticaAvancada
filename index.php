@@ -1,116 +1,107 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="css/rodape.css">
-    <link rel="stylesheet" href="login.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="all-plugins.js"></script>
-    <script type="text/javascript" src="plugins-activate.js"></script>
-    
-    <title>Tela de Login</title>
+<?php
+include('includes/head.php');
+?>
+    <title>Tela inicio</title>
 </head>
 <body>
-    <header>
-    <div class="logotipo">
-    <img src="img/logo2.png" alt="">
-    </div>    
-        <nav class="navegation">
-            <a href="#">Inicio</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
-            <button class="btnLogin-popup">Entrar</button>
-        </nav>
-
-    </header>
-
-    <div class="wrapper">
-        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-
-        <div class="form-box login">
-            <h2>Entrar</h2>
-            <form action="#">
-              <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="mail" required>
-                    <label>E-mail</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Senha</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Lembra-se</label>
-                    <a href="#">Esqueci minha Senha?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p class="toogle" onclick="$('.login').fadeOut(),$('.register').fadeIn()">Faça uma conta?<a href="#" class="resgister-link">Criar conta</a></p>
-                </div>
-            </form>
+<?php
+  include('includes/menu.php');
+  include('mobile/menuMobile.php');
+  ?>
+    <section id="Primeiro">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/teste1.jpg" class="d-block w-100 img-fluid" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="img/teste2.jpg" class="d-block w-100 img-fluid" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="img/teste3.jpg" class="d-block w-100 img-fluid" alt="">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <section id="Segundo">
+        <div class="cards">
+            <div class="card"><a href=""><img src="img/processos.png" alt=""></a>LOREM</div>
+            <div class="card"><a href=""><img src="img/processos.png" alt=""></a>LOREM</div>
+            <div class="card"><a href=""><img src="img/processos.png" alt=""></a>LOREM</div>
+            <div class="card"><a href=""><img src="img/processos.png" alt=""></a>LOREM</div>
         </div>
-    
-       
-            <h2>Registro</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Nome do Usuário</label>
+    </section>
+    <section id="Terceiro">
+        <div class="Sobre">
+          <h1>Sobre Nós</h1>
+           <p>Me chamo Tatiane Caxiado, formada desde 2018 em estética e cosmetologia e diversos cursos na área da estética como: Fatslim, Slim result, ozonioterapia, soroterapia dentre outros. <br>
+           Desenvolvedora do método mais inovador com resultados já na primeira sessão o Shappe Caxi, com o foco total em emagrecimento! <br>
+           Ajudando pessoas a resgatar sua autoestima. <br>
+           Atuamos no mercado à 4 anos, com espaço localizado em Santos, atendendo toda a Baixada Santista.</p>
+        </div>
+    </section>
+    <section id="Quarto">
+        <div class="Link">
+            <a href=""><img src="img/Link.jpg" class="img-fluid" alt=""></a>
+        </div>
+    </section>
+    <footer >
+    <div class="rodape" style="position:relative; !important">
+<div class="container-rodape">
+    <div class="footer">
+        <ul>
+               <li>
+                <h6 class="text-center">HORÁRIOS DE ATENDIMENTO</h6>
+                <p class="text-center">SEGUNDA À SEXTA DAS 07:00 ÀS 19:00 <br>(ABERTO AGORA)</p>
+            </li>
+
+            <li>
+                <h6 class="text-center">NOSSA LOCALIZAÇÃO</h6>
+
+                <a class="text-center" href="https://goo.gl/maps/CUvDmACquc1ZY91v5"><p class="text-center">Av. Dr. Pedro Lessa, 1640 - Aparecida, <br> Santos-SP, Sala: 604</p></a>
+            </li>
+            
+            <li class="redes">
+                
+                <h6 class="text-center">REDES SOCIAIS</h6>
+                <div class="svg">
+                    <a href="#"><i class="fa-brands fa-facebook fa-2xl" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-2xl" style="color: #000000;"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #000000;"></i></a>                              
                 </div>
-              <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="mail" required>
-                    <label>E-mail</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Nome do Usuário</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Nome do Usuário</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Senha</label>
-                </div>
-                <button type="submit" class="btn">Criar</button>
-                <div class="login-register">
-                    <p>Voltar a tela de Entrada?<a href="#" class="login-link">Clique Aqui</a></p>
-                </div>
-            </form>
-           
+            </li>
+            </ul>
+            <div class="termo">
+            <p><a href="#"> Política de Privacidade</a></p>
+            <p><a href="#"> Termos de Compra</a></p>
+            <p><a href="#">Política de Serviços</a> </p>
             </div>
          
+           
     </div>
     
-
-    <footer>
-
-        <?php
-            include("includes/rodape.php")
-        ?>   
-        
+</div>
+<div class="Cliente">
+    <p class="text-center">Copyright 2023© Tatiane Caxiado Estética Avançada</p>
+</div>
+</div>
     </footer>
-
-
- 
-
-    <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  
+  
+  </body>
 </html>
