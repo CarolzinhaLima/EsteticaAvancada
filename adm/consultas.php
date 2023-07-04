@@ -9,7 +9,7 @@
     
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-    <link href="css/adm.css" rel="stylesheet" type="text/css" />v
+    <link href="css/adm.css" rel="stylesheet" type="text/css" />
 </head>
 <style>
     button {
@@ -58,6 +58,12 @@ button:hover {
                     <a href="historico.php">
                         <span class="ti-agenda"></span>
                         <span>Histórico</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="clientes.php">
+                        <span class="ti-agenda"></span>
+                        <span>Clientes</span>
                     </a>
                 </li>
                 <li>

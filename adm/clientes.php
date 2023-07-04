@@ -83,72 +83,58 @@ button:hover {
                 </form>
                 
                     <div class="activity-card">
-                        <h3>Serviços Finalizados</h3>
+                        <h3>Clientes Agendados</h3>
 
                         <div class="table-responsive">
                             <table>
                                 <thead style="text-align: center;">
                                     <tr>
-                                    <th>id</th>
+                                    
                                     <th>Nome</th>
-                                    <th>Serviço</th>
-                                    <th>Data</th>
-                                    <th>Hora</th>
+                                    <th>Email</th>
                                     <th>Telefone</th>
                                     <th>CPF</th>
-                                    <th>Status</th>
+                                    <th>Senha</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     
                                         <?php
                                             $parametro =  filter_input(INPUT_GET, "parametro");
-                                            $result = $conn->query("SELECT * FROM historico WHERE nome_cliente LIKE '%$parametro%'");
+                                            $result = $conn->query("SELECT * FROM cliente WHERE nome_cliente LIKE '%$parametro%'");
                                                 while($row = $result->fetch_object()){
                                                     if($parametro){        
                                                         echo '
-                                                                <form action="finalizarServico.php" method="POST">
+                                                                <form action="clienteBack.php" method="POST">
                                                                 <tr>
-                                                                    <th>'.$row->id_historico.'</th>
-                                                                    <th>'.$row->nome_cliente.'</th>
-                                                                    <th>'.$row->nome_servico.'</th>
-                                                                    <th>'.$row->data.'</th>
-                                                                    <th>'.$row->hora.'</th>
-                                                                    <th>'.$row->telefone.'</th>
-                                                                    <th>'.$row->cpf.'</th>
-                                                                    <th> Finalizado </th>
                                                                     
-                                                                    <input value="'.$row->id_historico.'" name="id" type="hidden">
-                                                                    <input value="'.$row->nome_cliente.'" name="nome_cliente" type="hidden">
-                                                                    <input value="'.$row->nome_servico.'" name="nome_servico" type="hidden">
-                                                                    <input value="'.$row->data.'" name="data" type="hidden">
-                                                                    <input value="'.$row->hora.'" name="hora" type="hidden">
-                                                                    <input value="'.$row->telefone.'" name="telefone" type="hidden">
-                                                                    <input value="'.$row->cpf.'" name="cpf" type="hidden">
+                                                                    <th><input value="'.$row->nome_cliente.'" name="nome_cliente" type=""></th>
+                                                                    <th><input value="'.$row->email.'" name="email" type=""></th>
+                                                                    <th><input value="'.$row->telefone.'" name="telefone" type=""></th>
+                                                                    <th><input value="'.$row->cpf.'" name="cpf" type=""></th>
+                                                                    <th><input value="'.$row->senha.'" name="senha" type=""></th>
+                                                                    <th><button class="submit" name="id_excluir" type="submit">Excluir</button></th>
+                                                                    <th><button class="submit" name="id_att" type="submit">Atualizar</button></th>
+                                                                                                                                       
                                                                 </tr>
+                                                                <th><input value="'.$row->id_cliente.'" name="id" type="hidden"></th>
                                                                 </form>
                                                             ';
                                                     }else {
                                                         echo '    
-                                                            <form action="finalizarServico.php" method="POST">
+                                                            <form action="clienteBack.php" method="POST">
                                                             <tr>
-                                                                <th>'.$row->id_historico.'</th>
-                                                                <th>'.$row->nome_cliente.'</th>
-                                                                <th>'.$row->nome_servico.'</th>
-                                                                <th>'.$row->data.'</th>
-                                                                <th>'.$row->hora.'</th>
-                                                                <th>'.$row->telefone.'</th>
-                                                                <th>'.$row->cpf.'</th>
-                                                                <th> Finalizado </th>
-                                                          
-                                                                <input value="'.$row->id_historico.'" name="id" type="hidden">
-                                                                <input value="'.$row->nome_cliente.'" name="nome_cliente" type="hidden">
-                                                                <input value="'.$row->nome_servico.'" name="nome_servico" type="hidden">
-                                                                <input value="'.$row->data.'" name="data" type="hidden">
-                                                                <input value="'.$row->hora.'" name="hora" type="hidden">
-                                                                <input value="'.$row->telefone.'" name="telefone" type="hidden">
-                                                                <input value="'.$row->cpf.'" name="cpf" type="hidden">
+                                                                
+                                                                <th><input value="'.$row->nome_cliente.'" name="nome_cliente" type=""></th>
+                                                                <th><input value="'.$row->email.'" name="email" type=""></th>
+                                                                <th><input value="'.$row->telefone.'" name="telefone" type=""></th>
+                                                                <th><input value="'.$row->cpf.'" name="cpf" type=""></th>
+                                                                <th><input value="'.$row->senha.'" name="senha" type=""></th>
+                                                                <th><button class="submit" name="id_excluir" type="submit">Excluir</button></th>
+                                                                <th><button class="submit" name="id_att" type="submit">Atualizar</button></th>
+                                                               
                                                             </tr>
+                                                            <th><input value="'.$row->id_cliente.'" name="id" type="hidden"></th>
                                                             </form>
                                                         ';
                                                     }
