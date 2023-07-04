@@ -10,7 +10,6 @@
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    gap: 100px;
     justify-items: center;
     justify-content: space-around;
    
@@ -24,6 +23,7 @@
 }
 .card img{
     border-radius: 50%;
+    width: 80%;
 }
 #Segundo{
     margin-top: 50px;
@@ -49,4 +49,31 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+@media (min-width:1001px) and (max-width:1200px){
+.cards{
+    gap: 2px;
+ }
+}
 
+@media (min-width:768px) and (max-width:1000px){
+.cards{
+    display: flex;
+    gap: 2px;
+}
+.cards img{
+    width: 60%;    
+}
+}
+
+@media (min-width:400px) and (max-width:767px){
+.cards{
+    display:flex;
+    gap: 2.5px;    
+}
+.cards img{
+    width: 60%;    
+}
+#Terceiro{
+    margin-top: 50px;
+}
+}
