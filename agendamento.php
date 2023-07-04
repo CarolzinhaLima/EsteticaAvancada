@@ -15,32 +15,36 @@ include "includes/menu.php";
             
             <div class="conter">
                   <div class="lista">
-                    <ul>
-                        <h2 class="pre">Histórico de Serviços</h2>
-                        <li>
-                          <?php
-                          echo '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>'?>
-                        </li>
-                    </ul>
+                <tbody>
+                            <h2 class="pre">Histórico de Serviços</h2>
+                            
+                            <?php
+                            echo'  
+                            <tr>
+                              <>th  
+                              
+                            </tr>
+                            '?>
+                        
+                      </div>
+                      <div class="linha-vertical"></div>
+                      <div class="situacao">
+                        <ul>
+                            <h2 class="pre">Situação do Serviço</h2>
+                            <li><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p></li>
+                        </ul>
+                      </div>
                   </div>
-                  <div class="linha-vertical"></div>
-                  <div class="situacao">
-                    <ul>
-                        <h2 class="pre">Situação do Serviço</h2>
-                        <li><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p></li>
-                    </ul>
-                  </div>
-              </div>
 
-              <div class="conter_moblie">
-                  <div class="lista_2">
-                    <ul>
-                        <h2 class="pre">Histórico de Serviços</h2>
-                        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p></li>
-                    </ul>
+                  <div class="conter_moblie">
+                      <div class="lista_2">
+                        <ul>
+                            <h2 class="pre">Histórico de Serviços</h2>
+                            <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p></li>
+                        </ul>
+                      </div>
                   </div>
-              </div>
-
+              </tbody>
         </div>
 
          <h2 class="H">Selecione o serviço que deseja realizar o agendamento!</h2>
