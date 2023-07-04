@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.pix2 {
+    display: flex;
+    gap: px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+.icons{
+    display: flex;
+}
+
+.icons p{
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.progresso{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    background-color: #fdd4dd;
+    margin-bottom: 2rem;
+    margin-top: 5.6rem;
+}
+.caixa{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit,minmax(400px,auto));
+    gap:20px;
+    margin: 0 2rem 0 2rem;
+}
+.caixa2{
+    display: flex;
+    justify-content:flex-start;
+    gap: 20px;
+    margin: 1rem 2rem 1rem 2rem;
+    border: #F77692 solid 1px;
+    border-radius: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.caixa2 p{
+   
+    display: flex;
+    flex-basis: 80%;
+}
+.info{
+    display: flex;
+    justify-content: right;
+    padding: 1rem;
+    gap: 20px;
+    color: #F77692;
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+}
+.total{
+    background: #FDD4DD;  
+    width: 25%;
+    text-align: center;
+}
+h1{
+    color: #F67692;
+    margin: 2%;
+}
+.btnbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-align: center;
+}
+#btn1 {
+    width: 300px !important;
+}
+.lista{
+    width: 100%;
+    height: 500px;
+    background-color: #fdd4dd;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.consultas{
+    width: 100%;
+    color: #F67692;
+}
+.resumo h1{
+    color: #F67692;
+    
+}
+.pagamento h1{
+    margin-left: 2rem;
+}
+.resumo{
+    width: 100%;
+}
+.custos{
+    border: #F67692 solid 1px;
+    width: 100%;
+    height: 500px;
+    border-radius: 2rem;
+    padding-top: 2rem;
+}
+.custosdivs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+
+hr{
+    margin-top: 2px !important;
+    margin-bottom: 2rem;
+    width: 90%;
+}
+.pix{
+    background: #D4FDEC;
+    color: #0A9518;
+    width: 25%;
+    text-align: center;
+}
+.custosdivs #btn1{
+    width: 55%;
+    height: 50px;
+    background: #FDD4DD;
+    border-radius: 10px;
+    color: white;
+    border: #fdd4dd;
+    font-weight: bold;
+
+}
+.custosdivs #btn2{
+    width: 55%;
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    color: #F77692;
+    border: #fdd4dd solid 1px;
+    font-weight: bold;
+}
+.ponto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnpix{
+    background-color: #F77692;
+    color: white;
+    border: #F77692 solid 1px;
+    border-radius: 1rem;
+    text-align: left;
+    padding-left: 1rem;
+    width: 100%;
+    
+}
+.btnpag{
+    background-color:white;
+    color:#F77692;
+    border: #F77692 solid 1px;
+    border-radius: 1rem;
+    width: 200px;
+    
+}
+.btnpix3{
+    background-color: white;
+    color:#F77692;
+    border: #F77692 solid 1px;
+    border-radius: 1rem;
+    text-align: left;
+    padding-left: 1rem;
+    width: 200px;
+    
+}
+
+#btnpag2{
+    background-color: #F77692;
+    color: white ;
+    border: #F77692 solid 1px;
+    border-radius: 1rem; 
+    width: 200px;  
+}
+
+.opc {
+    display: flex;
+    justify-content: end;
+    margin: 1rem 2rem;
+    gap: 20px;
+}
+.opc a #voltar{
+    width: 300px;
+    background-color: white;
+    border: #F77692 solid 1px;
+    border-radius: 1rem;
+    color: #F67692;
+}
+.opc a #btnpix2{
+    width: 300px;
+    background-color: #fdd4dd;
+    color: white;
+    border-radius: 1rem;
+    border: #fdd4dd;
+}
+.custosdivs a #voltar{
+    width: 300px;
+    background-color: white;
+    border: #F77692 solid 1px;
+    border-radius: 1rem;
+    color: #F67692;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
