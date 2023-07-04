@@ -15,7 +15,7 @@
 .container-rodape{
     background-color: #fdd4dd;
     padding-top: 1.5%;
- width: 100%;
+    width: 100%;
 }
 .rodape{
     background: #fdd4dd;
@@ -100,7 +100,6 @@ footer .termo a{
     }
     footer ul{
     display: flex;  
-    margin: 0 5rem 0 13rem !important;
     list-style: none; 
     }
     footer ul h6{
@@ -173,7 +172,6 @@ footer .termo a{
     footer ul h6{
         text-decoration: solid; 
         white-space: nowrap;
-        margin-top: 1rem;
          text-align: center !important;
               
     }
@@ -203,7 +201,12 @@ footer .termo a{
         font-size: 15px;
         text-align: center;
     }
-
+    footer .redes .svg{
+        margin: 7.5%;
+    }
+    footer ul {
+        margin: 0 10% 0 5%;
+    }
 }
 
 
