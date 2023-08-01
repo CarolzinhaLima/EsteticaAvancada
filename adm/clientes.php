@@ -97,51 +97,7 @@ button:hover {
                                     <th>Senha</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    
-                                        <?php
-                                            $parametro =  filter_input(INPUT_GET, "parametro");
-                                            $result = $conn->query("SELECT * FROM cliente WHERE nome_cliente LIKE '%$parametro%'");
-                                                while($row = $result->fetch_object()){
-                                                    if($parametro){        
-                                                        echo '
-                                                                <form action="clienteBack.php" method="POST">
-                                                                <tr>
-                                                                    
-                                                                    <th><input value="'.$row->nome_cliente.'" name="nome_cliente" type=""></th>
-                                                                    <th><input value="'.$row->email.'" name="email" type=""></th>
-                                                                    <th><input value="'.$row->telefone.'" name="telefone" type=""></th>
-                                                                    <th><input value="'.$row->cpf.'" name="cpf" type=""></th>
-                                                                    <th><input value="'.$row->senha.'" name="senha" type=""></th>
-                                                                    <th><button class="submit" name="id_excluir" type="submit">Excluir</button></th>
-                                                                    <th><button class="submit" name="id_att" type="submit">Atualizar</button></th>
-                                                                                                                                       
-                                                                </tr>
-                                                                <th><input value="'.$row->id_cliente.'" name="id" type="hidden"></th>
-                                                                </form>
-                                                            ';
-                                                    }else {
-                                                        echo '    
-                                                            <form action="clienteBack.php" method="POST">
-                                                            <tr>
-                                                                
-                                                                <th><input value="'.$row->nome_cliente.'" name="nome_cliente" type=""></th>
-                                                                <th><input value="'.$row->email.'" name="email" type=""></th>
-                                                                <th><input value="'.$row->telefone.'" name="telefone" type=""></th>
-                                                                <th><input value="'.$row->cpf.'" name="cpf" type=""></th>
-                                                                <th><input value="'.$row->senha.'" name="senha" type=""></th>
-                                                                <th><button class="submit" name="id_excluir" type="submit">Excluir</button></th>
-                                                                <th><button class="submit" name="id_att" type="submit">Atualizar</button></th>
-                                                               
-                                                            </tr>
-                                                            <th><input value="'.$row->id_cliente.'" name="id" type="hidden"></th>
-                                                            </form>
-                                                        ';
-                                                    }
-                                                }
-                                      ?>
-                                    
-                                </tbody>
+                                <tbody class="tbody"></tbody>
                             </table>
                         </div>
                     </div>
@@ -151,7 +107,8 @@ button:hover {
 </section>
 </main>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/scriptBack.js"></script>
 </body>
 
 </html>

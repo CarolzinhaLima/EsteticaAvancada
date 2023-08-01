@@ -1,41 +1,39 @@
 <?php
-    include("php/conexao.php");  
+    header('Content-Type: application/json');
 
-    $id                     = $_POST['id'];
     $nome_cliente           = $_POST['nome_cliente'];
     $email                  = $_POST['email'];
     $telefone               = $_POST['telefone'];
     $cpf                    = $_POST['cpf'];
     $senha                  = $_POST['senha'];
 
-if(isset($_POST['id_att'])){     
+    if(isset($_POST['id_att'])){  
 
-    $sql = "UPDATE cliente SET nome_cliente = '$nome_cliente', email = '$email', telefone = '$telefone', cpf = '$cpf', senha = '$senha' WHERE id_cliente = '$id'";
+        $pdo = new PDO('mysql:host=localhost:3310; dbname=estetica;', 'root', '');
 
-    $result = mysqli_query($conn,$sql);
-    $rows = mysqli_affected_rows($conn);
+        $stmt = $pdo->prepare('UPDATE cliente SET (nome_cliente, email, telefone, cpf, senha) VALUES (:nc, :em, :te, :cp, :se )');
+        $stmt->bindValue(':nc', $nome_cliente);
+        $stmt->bindValue(':em', $email);
+        $stmt->bindValue(':te', $telefone);
+        $stmt->bindValue(':cp', $cpf);
+        $stmt->bindValue(':se', $senha);
+        $stmt->execute();
 
-    if($rows > 0){
-       
-        echo "<script> alert('Atualizado Com Sucesso!'); window.location.href='/EsteticaAvancada/adm/clientes.php'</script>";
-       
+        if ($stmt->rowCount() >= 1) {
+            echo json_encode('Att com Sucesso');
+        } else {
+            echo json_encode('Falha ao Att');
+        }
     }
-    else {
-        echo "ERRO AO TENTAR INSERIR IMFORMAÇÕES!";
-    }
-}
-else if(isset($_POST['id_excluir'])){
+    else if(isset($_POST['id_excluir'])){
     
-    $sql = "DELETE FROM cliente WHERE id_cliente = '$id'";
-    $result = mysqli_query($conn,$sql);
-    $rows = mysqli_affected_rows($conn);
-
-    if($rows > 0){
-        echo "<script> alert('Excluido Com Sucesso!'); window.location.href='/EsteticaAvancada/adm/clientes.php'</script>";
+        $stmt = $pdo->prepare('DELETE FROM cliente WHERE id_cliente = '$id'');
+        $stmt->execute();
+    
+        if ($stmt->rowCount() >= 1) {
+            echo json_encode('Ex com Sucesso');
+        } else {
+            echo json_encode('Falha ao Ex');
+        }
     }
-    else{
-        echo "ERRO AO EXCLUIR!";
-    }
-}
-
 ?>

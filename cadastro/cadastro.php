@@ -1,30 +1,25 @@
 <?php
-    include("conexao.php");  
+    header('Content-Type: application/json');
 
-    
     $nome_cliente           = $_POST['nome_cliente'];
     $email                  = $_POST['email'];
     $telefone               = $_POST['telefone'];
     $cpf                    = $_POST['cpf'];
     $senha                  = $_POST['senha'];
 
-if(isset($_POST['id_cadastrar'])){     
+    $pdo = new PDO('mysql:host=localhost:3310; dbname=estetica;', 'root', '');
 
-    $sql = ("INSERT INTO cliente (nome_cliente,email,telefone,cpf,senha) values ('$nome_cliente','$email','$telefone','$cpf','$senha')");
+    $stmt = $pdo->prepare('INSERT INTO cliente (nome_cliente, email, telefone, cpf, senha) VALUES (:nc, :em, :te, :cp, :se )');
+    $stmt->bindValue(':nc', $nome_cliente);
+    $stmt->bindValue(':em', $email);
+    $stmt->bindValue(':te', $telefone);
+    $stmt->bindValue(':cp', $cpf);
+    $stmt->bindValue(':se', $senha);
+    $stmt->execute();
 
-    $result = mysqli_query($conn,$sql);
-    $rows = mysqli_affected_rows($conn);
-
-    if($rows > 0){
-
-        echo "<script> alert('Cadastrado Com Sucesso!'); window.location.href='/esteticaAvancada/login.php'</script>";
+    if ($stmt->rowCount() >= 1) {
+        echo json_encode('Cadastro Salvo com Sucesso');
+    } else {
+        echo json_encode('Falha ao salvar Cadastro');
     }
-    else{
-        echo "ERRO AO CADASTRAR!";
-    }
-}
-else {
-    echo "ERRO AO TENTAR INSERIR IMFORMAÇÕES!";
-}
-
 ?>

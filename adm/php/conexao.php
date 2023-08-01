@@ -1,7 +1,7 @@
 <?php
-    $conn;
-    $conn = mysqli_connect('localhost:3310','root','','estetica');
+    $pdo;
+    $pdo = new PDO('mysql:host=localhost:3310; dbname=estetica;', 'root', '');
 
-    if(!$conn){
+    if(!$pdo){
         echo "ERRO NO BANCO!";
 }
