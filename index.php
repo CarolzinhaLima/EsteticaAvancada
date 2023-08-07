@@ -48,7 +48,7 @@ include('includes/head.php');
     <section id="Terceiro">
         <div class="Sobre">
           <h1>Sobre Nós</h1>
-           <p>Me chamo Tatiane Caxiado, formada desde 2018 em estética e cosmetologia e diversos cursos na área da estética como: Fatslim, Slim result, ozonioterapia, soroterapia dentre outros. <br>
+           <p>Meee chamo Tatiane Caxiado, formada desde 2018 em estética e cosmetologia e diversos cursos na área da estética como: Fatslim, Slim result, ozonioterapia, soroterapia dentre outros. <br>
            Desenvolvedora do método mais inovador com resultados já na primeira sessão o Shappe Caxi, com o foco total em emagrecimento! <br>
            Ajudando pessoas a resgatar sua autoestima. <br>
            Atuamos no mercado à 4 anos, com espaço localizado em Santos, atendendo toda a Baixada Santista.</p>
