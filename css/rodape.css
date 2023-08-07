@@ -15,7 +15,7 @@
 .container-rodape{
     background-color: #fdd4dd;
     padding-top: 1.5%;
- width: 100%;
+    width: 100%;
 }
 .rodape{
     background: #fdd4dd;
@@ -172,6 +172,10 @@ footer .termo a{
         background-color: #fdd4dd;
         width: 100%     
     }
+    .text-center {
+        text-align: center!important;
+        margin: 8px;
+    }
     
     footer ul{
     list-style: none; 
@@ -201,6 +205,9 @@ footer .termo a{
     footer .svg{
         display: flex;
         justify-content: center;
+    }
+    footer .redes .svg{
+        margin: 10% ;
     }
     footer .Cliente{
         background-color: #ffb4c4;       
