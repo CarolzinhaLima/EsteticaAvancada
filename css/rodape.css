@@ -161,6 +161,13 @@ footer .termo a{
         margin: 0;
         padding: 0;
     }
+    .rodape{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 115% 0 0 0;
+     
+    }
     footer .container-rodape{
         background-color: #fdd4dd;
         width: 100%     

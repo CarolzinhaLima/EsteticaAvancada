@@ -24,10 +24,7 @@
 .servico{
     margin-top: 150px;
 }
-    
-.titulo{
-   background-color: var(--cinzaClaro);
-}
+
 .servico{
     position: relative;
     top: -85px;
@@ -65,4 +62,33 @@ a.btn.btn-primary{
 }
 a.btn.btn-primary:hover{
     background: var(--rosaEscuro);
+}
+@media (min-width:1001px) and (max-width:1200px){
+  
+}
+
+@media (min-width:768px) and (max-width:1000px){
+
+
+}
+
+@media (min-width:400px) and (max-width:767px){
+    h1.titulo {
+        font-size: 35px;
+    }
+    .servico{
+        margin-top: 0;
+    }
+    .servico h1{
+        margin: 45% 0 10% 0;
+        position: relative;
+        top: 30px;
+    }
+    .card{
+        margin: 0 0 10% 0;
+    }
+    .conteudo{
+    flex-direction:column ;
+    }
+
 }
