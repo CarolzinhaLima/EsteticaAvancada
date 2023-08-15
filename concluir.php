@@ -19,7 +19,7 @@
         <div class="caixa">
             <div class="consultas">
                 <h1>Seu Agendamento</h1>
-                <div class="lista">
+                <div class="lista2">
                     <p>Seu Agendamento foi marcado para : </p>
                     <p>Forma de Pagamento:</p>
                     <p>Valor Pago:</p>
