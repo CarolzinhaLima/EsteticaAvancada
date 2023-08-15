@@ -60,7 +60,11 @@ include('includes/head.php');
         </div>
     </section>
     <footer >
+<<<<<<< HEAD
     <div class="rodape" style="position:relative; bottom: 0; !important">
+=======
+    <div class="rodape" style="position:relative; !important">
+>>>>>>> 0a3de85ef50aa6d584f931e274b95caf3d051135
 <div class="container-rodape">
     <div class="footer">
         <ul>

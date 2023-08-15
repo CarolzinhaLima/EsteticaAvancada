@@ -51,6 +51,7 @@
 </main>
 
 <footer>
+<<<<<<< HEAD
 <div class="rodape" style=" margin: 115% 0 0 0; !important">
 <div class="container-rodape">
     <div class="footer">
@@ -90,6 +91,11 @@
     <p class="text-center">Copyright 2023© Tatiane Caxiado Estética Avançada</p>
 </div>
 </div>
+=======
+<?php
+  include('includes/rodape.php');
+?>
+>>>>>>> 0a3de85ef50aa6d584f931e274b95caf3d051135
 </footer>
 </body>
 </html>
